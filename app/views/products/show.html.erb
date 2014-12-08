@@ -1,0 +1,20 @@
+<%= form_for @product do |f| %>
+<%= f.label :name %>:
+<%= @product.name %><br>
+
+<%= f.label :description %>:
+<%= @product.description %><br>
+
+<%= f.label :price %>:
+<%= @product.price %><br>
+
+<%= f.label :created_at %>:
+<%= @product.created_at %><br>
+
+<%= f.label :updated_at %>:
+<%= @product.updated_at %><br>
+
+<% end %>
+<%= link_to "Back", products_path %>
+<%= link_to("Edit", edit_product_path(@product)) %>>
+<%= link_to "Delete", product_path(@product), data: { confirm: 'Are you sure?' }, :method => :delete %>
